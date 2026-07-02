@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import WorkCard from "./WorkCard";
 import styles from "./Work.module.css";
+import Link from "next/link";
 
 export default function Work() {
   return (
