@@ -37,7 +37,9 @@ export default function PosterPage() {
         minHeight: "100vh",
         background:
           "radial-gradient(circle at top, #F3E8D7 0%, #E8D8C4 45%, #E8D8C4 100%)",
-        padding: "60px 40px",
+        padding: "60px 20px",
+        boxSizing: "border-box",
+        overflowX: "hidden",
       }}
     >
       <Link
@@ -46,6 +48,8 @@ export default function PosterPage() {
           textDecoration: "none",
           color: "#561C24",
           fontWeight: 600,
+          display: "inline-block",
+          marginBottom: "20px",
         }}
       >
         ← Back to Home
@@ -59,6 +63,7 @@ export default function PosterPage() {
           textAlign: "center",
           marginTop: "40px",
           marginBottom: "70px",
+          padding: "0 10px",
         }}
       >
         <p
@@ -72,7 +77,7 @@ export default function PosterPage() {
 
         <h1
           style={{
-            fontSize: "5rem",
+            fontSize: "clamp(2.5rem, 6vw, 5rem)",
             color: "#561C24",
             fontFamily: "var(--font-cormorant)",
             marginTop: "20px",
@@ -97,10 +102,11 @@ export default function PosterPage() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
-          gap: "35px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "25px",
           maxWidth: "1300px",
           margin: "0 auto",
+          justifyItems: "center",
         }}
       >
         {posters.map((poster, index) => (
@@ -116,6 +122,8 @@ export default function PosterPage() {
               borderRadius: "24px",
               overflow: "hidden",
               boxShadow: "0 20px 45px rgba(86,28,36,0.15)",
+              width: "100%",
+              maxWidth: "380px",
             }}
           >
             <motion.img
@@ -125,17 +133,14 @@ export default function PosterPage() {
               alt={poster.title}
               style={{
                 width: "100%",
-                aspectRatio: "3/4",
+                display: "block",
+                aspectRatio: "3 / 4",
                 objectFit: "cover",
               }}
             />
 
             <div style={{ padding: "20px" }}>
-              <h3
-                style={{
-                  color: "#E8D8C4",
-                }}
-              >
+              <h3 style={{ color: "#E8D8C4" }}>
                 {poster.title}
               </h3>
 
