@@ -1,0 +1,72 @@
+.section {
+  padding: 100px 40px;
+}
+
+.title {
+  color: #561c24;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 60px;
+  font-family: var(--font-cormorant);
+}
+
+/* ---------------- Video ---------------- */
+
+.videoSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* ---------------- Cards ---------------- */
+
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Make the Thumbnail card appear centered on its own row */
+.cardGrid > :last-child {
+  margin-top: 10px;
+}
+
+/* ---------------- Tablet ---------------- */
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 80px 30px;
+  }
+
+  .cardGrid {
+    gap: 30px;
+  }
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 20px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .videoSection {
+    margin-bottom: 30px;
+  }
+
+  .cardGrid {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .cardGrid > :last-child {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,65 @@
+.main {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.desktopLinks {
+  display: flex;
+  gap: 25px;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #561c24;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .desktopLinks {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: #e8d8c4;
+    padding: 20px 24px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+  }
+
+  .mobileMenu a {
+    color: #561c24;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+}
