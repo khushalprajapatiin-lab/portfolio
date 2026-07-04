@@ -14,6 +14,11 @@ const videos = [
     poster: "/work/edit2.png",
     title: "Project 2",
   },
+  {
+    video: "/work/video/edit3.mp4",
+    poster: "/work/edit3.png",
+    title: "Project 3",
+  },
 ];
 
 export default function VideoPage() {
